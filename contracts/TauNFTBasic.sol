@@ -466,7 +466,6 @@ contract TauNFTBasic is
   )
     internal
     virtual
-    canReceiveNFT(_to)
   {
     require(idToOwner[_tokenId] == address(0), NFT_ALREADY_EXISTS);
 
@@ -512,7 +511,6 @@ contract TauNFTBasic is
   {
     address tokenOwner = idToOwner[_tokenId];
     require(tokenOwner == _from, NOT_OWNER);
-    require(_to != address(0), ZERO_ADDRESS);
 
     _transfer(_to, _tokenId);
 

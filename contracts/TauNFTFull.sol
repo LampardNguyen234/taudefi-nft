@@ -129,6 +129,7 @@ ERC721Metadata
     )
     public
     notExists(_uri)
+    canReceiveNFT(_to)
     {
         _tokenIds.increment();
 
